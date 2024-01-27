@@ -13,6 +13,9 @@ node_modules
 # typescript
 *.tsbuildinfo
 
+# dynamoDB
+.dynamodb
+
 ### https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
 
 # IDE - VSCode

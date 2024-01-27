@@ -17,6 +17,13 @@ custom:
     # https://github.com/floydspace/serverless-esbuild?tab=readme-ov-file#serverless-offline
     watch:
       pattern: ['src/**/*.ts']
+  serverless-dynamodb:
+    stages:
+      - dev
+    start:
+      port: 8000
+      inMemory: true
+      migrate: true
 
 provider:
   name: aws
@@ -32,7 +39,8 @@ functions:
       - httpApi: '*'
 
 plugins:
-  - serverless-better-credentials
+  - serverless-dynamodb
   - serverless-offline
+  - serverless-better-credentials
   - serverless-dotenv-plugin
   - serverless-esbuild

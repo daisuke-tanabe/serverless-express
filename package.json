@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "serverless offline",
+    "dev": "serverless offline start",
     "deploy": "dotenv -e .env.local -- bash -c 'serverless deploy --aws-profile $AWS_SSO_PROFILE'",
+    "dynamo:install": "serverless dynamodb install",
+    "dyname:remove": "serverless dynamodb remove",
+    "dynamo:start": "serverless dynamodb start",
     "remove": "dotenv -e .env.local -- bash -c 'serverless remove --aws-profile $AWS_SSO_PROFILE'",
     "type-check": "tsc --noEmit"
   },
