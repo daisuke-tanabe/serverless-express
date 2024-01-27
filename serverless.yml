@@ -6,9 +6,15 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs18.x
+  stage: dev
+  region: ap-northeast-1
+  profile: daisuke-admin
 
 functions:
   api:
     handler: index.handler
     events:
       - httpApi: '*'
+
+plugins:
+  - serverless-better-credentials
