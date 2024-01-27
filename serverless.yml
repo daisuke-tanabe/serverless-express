@@ -3,6 +3,21 @@ app: serverless-express
 service: serverless-express
 frameworkVersion: '3'
 
+package:
+  individually: true
+
+custom:
+  # https://github.com/floydspace/serverless-esbuild?tab=readme-ov-file#options
+  esbuild:
+    bundle: true
+    minify: false
+    concurrency: 8
+    zipConcurrency: 8
+    target: "node20"
+    # https://github.com/floydspace/serverless-esbuild?tab=readme-ov-file#serverless-offline
+    watch:
+      pattern: ['src/**/*.ts']
+
 provider:
   name: aws
   runtime: nodejs18.x
@@ -12,7 +27,7 @@ provider:
 
 functions:
   api:
-    handler: index.handler
+    handler: src/index.handler
     events:
       - httpApi: '*'
 
@@ -20,3 +35,4 @@ plugins:
   - serverless-better-credentials
   - serverless-offline
   - serverless-dotenv-plugin
+  - serverless-esbuild

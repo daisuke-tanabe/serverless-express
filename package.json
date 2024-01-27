@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "dev": "serverless offline",
     "deploy": "dotenv -e .env.local -- bash -c 'serverless deploy --aws-profile $AWS_SSO_PROFILE'",
     "remove": "dotenv -e .env.local -- bash -c 'serverless remove --aws-profile $AWS_SSO_PROFILE'"
   },
