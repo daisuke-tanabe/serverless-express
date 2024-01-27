@@ -7,6 +7,7 @@
     "serverless-http": "^3.1.1"
   },
   "devDependencies": {
+    "dotenv-cli": "^7.3.0",
     "serverless-better-credentials": "^2.0.0",
     "serverless-dotenv-plugin": "^6.0.0",
     "serverless-offline": "^13.3.3"
