@@ -1,5 +1,11 @@
+### dependencies
 node_modules
+
+### serverless
 .serverless
+
+### local env files
+.env.local
 
 ### https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
 
