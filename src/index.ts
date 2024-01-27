@@ -1,4 +1,4 @@
-import serverless from "serverless-http";
+import serverlessExpress from '@codegenie/serverless-express';
 import express from "express";
 
 const app = express();
@@ -21,4 +21,4 @@ app.use((req, res, next) => {
   });
 });
 
-module.exports.handler = serverless(app);
+module.exports.handler = serverlessExpress({ app });
