@@ -19,3 +19,4 @@ functions:
 plugins:
   - serverless-better-credentials
   - serverless-offline
+  - serverless-dotenv-plugin
