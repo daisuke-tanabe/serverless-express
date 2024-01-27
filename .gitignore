@@ -1,14 +1,17 @@
-### serverless-express
+# serverless-express
 .build
 
-### dependencies
+# dependencies
 node_modules
 
-### serverless
+# serverless
 .serverless
 
-### local env files
+# local env files
 .env.local
+
+# typescript
+*.tsbuildinfo
 
 ### https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
 

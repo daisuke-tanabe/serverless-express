@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "serverless offline",
     "deploy": "dotenv -e .env.local -- bash -c 'serverless deploy --aws-profile $AWS_SSO_PROFILE'",
-    "remove": "dotenv -e .env.local -- bash -c 'serverless remove --aws-profile $AWS_SSO_PROFILE'"
+    "remove": "dotenv -e .env.local -- bash -c 'serverless remove --aws-profile $AWS_SSO_PROFILE'",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "express": "^4.18.2",
